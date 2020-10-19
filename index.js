@@ -10,16 +10,16 @@ const refs = {
 
 refs.list.innerHTML = galleryItems
   .map(
-    img => `<li class="gallery__item">
+    ({ preview, original, description }) => `<li class="gallery__item">
 <a
   class="gallery__link"
-  href="${img.original}"
+  href="${original}"
 >
   <img
     class="gallery__image"
-    src="${img.preview}"
-    data-source="${img.original}"
-    alt="${img.description}"
+    src="${preview}"
+    data-source="${original}"
+    alt="${description}"
   />
 </a>
 </li>`,
